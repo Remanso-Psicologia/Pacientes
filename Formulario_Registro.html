@@ -37,7 +37,9 @@
         input[type="text"],
         input[type="email"],
         input[type="date"],
-        input[type="tel"],
+        input[type="cel"],
+        input[type="eps"],
+        input[type="rh"],
         textarea,
         select {
             width: 100%;
@@ -90,8 +92,11 @@
 <body>
     <div class="container">
         <h2>Formulario de Registro de Paciente</h2>
+		
         <form action="#" method="POST">
             <!-- Datos personales -->
+			<h2 class="h2">Datos Del Paciente</h2>
+			
             <div class="form-row">
                 <div class="form-group">
                     <label for="nombre">Nombre completo *</label>
@@ -106,7 +111,11 @@
                     <input type="text" id="edad" name="edad" required>
                 </div>
             </div>
-
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de nacimiento *</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </div>
+			
             <div class="form-row">
                 <div class="form-group">
                     <label for="genero">Género *</label>
@@ -119,15 +128,21 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="direccion">Dirección *</label>
-                <input type="text" id="direccion" name="direccion" required>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="eps">EPS *</label>
+                    <input type="eps" id="eps" name="eps" required>
+                </div>
+                <div class="form-group">
+                    <label for="rh">RH *</label>
+                    <input type="rh" id="rh" name="rh" required>
+                </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="telefono">Teléfono *</label>
-                    <input type="tel" id="telefono" name="telefono" required>
+                    <label for="celular">Celular *</label>
+                    <input type="cel" id="celular" name="celular" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Correo electrónico *</label>
@@ -135,27 +150,51 @@
                 </div>
             </div>
 
+            <div class="form-row">
+				<div class="form-group">
+					<label for="direccion">Ciudad de Residencia *</label>
+					<input type="text" id="direccion" name="direccion" required>
+				</div>
+				<div class="form-group">
+					<label for="direccion">Dirección de Residencia *</label>
+					<input type="text" id="direccion" name="direccion" required>
+				</div>
+            </div>
+
+            <!-- Antecedentes -->
+			<h2 class="h2">Antecedentes</h2>
             <div class="form-group">
-                <label for="fecha_nacimiento">Fecha de nacimiento *</label>
-                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                <label for="motivo_consulta">Motivo de consulta:</label>
+                <textarea id="motivo_consulta" name="motivo_consulta" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="antecedentes_psicologicos">Antecedentes psicológicos:</label>
+                <textarea id="antecedentes_psicologicos" name="antecedentes_psicologicos" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="expectativas_proceso">Expectativas con el proceso:</label>
+                <textarea id="expectativas_proceso" name="expectativas_proceso" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="enfermedades_diagnosticadas">Enfermedades diagnosticadas:</label>
+                <textarea id="enfermedades_diagnosticadas" name="enfermedades_diagnosticadas" rows="4"></textarea>
             </div>
 
             <!-- Información médica -->
+			<h2 class="h2">Contacto de Emergencia</h2>
             <div class="form-group">
-                <label for="enfermedades_previas">Enfermedades previas:</label>
-                <textarea id="enfermedades_previas" name="enfermedades_previas" rows="4"></textarea>
+                <label for="nombre_e">Nombre completo *</label>
+				<input type="text" id="nombre_e" name="nombre_e" required>
             </div>
-
+			<div class="form-group">
+                <label for="celular_e">Celular *</label>
+                <input type="text" id="celular_e" name="celular_e" required>
+            </div>
             <div class="form-group">
-                <label for="medicamentos">Medicamentos actuales:</label>
-                <textarea id="medicamentos" name="medicamentos" rows="4"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="alergias">Alergias conocidas:</label>
-                <textarea id="alergias" name="alergias" rows="4"></textarea>
-            </div>
-
+                <label for="parentesco">Parentesco *</label>
+                <input type="text" id="parentesco" name="parentesco" required>
+            </div>			
+			
             <button type="submit" class="btn">Registrar paciente</button>
         </form>
     </div>
