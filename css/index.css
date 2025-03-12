@@ -50,4 +50,10 @@
 			background-size: cover; /* La imagen cubre toda el área sin distorsionarse */
 			background-position: center; /* Centra la imagen */
 			background-attachment: fixed; /* La imagen no se mueve cuando se hace scroll */
-		}		
+		}
+
+		@media only screen and (max-width: 768px) {
+			body {
+				background-image: url('../image/movil.jpg');
+			}
+		}
