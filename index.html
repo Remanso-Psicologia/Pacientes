@@ -4,74 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ee9a58;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .login-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .login-container input {
-            width: 92.8%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-		/* Color Boton */
-        .login-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #ee9a58;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-		/* Color Boton Flotar */
-        .login-container button:hover {
-            background-color: #45a049;
-			color: black;
-        }
-    </style>
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
     <div class="login-container">
         <h2>Iniciar sesión</h2>
-        <form id="loginForm" onsubmit="handleLogin(event)">
+        <form id="loginForm" action="\php\login.php" method="POST">
             <input type="text" id="username" name="username" placeholder="Usuario" required><br>
             <input type="password" id="password" name="password" placeholder="Contraseña" required><br>
             <button type="submit">Entrar</button>
         </form>
     </div>
-
-    <script>
-        function handleLogin(event) {
-            event.preventDefault(); // Evita que el formulario se envíe y recargue la página
-
-            // Obtener los valores del formulario
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-
-            // Mostrar los datos (esto puede ser reemplazado por una solicitud a un servidor)
-            alert('Usuario: ' + username + '\nContraseña: ' + password);
-        }
-    </script>
 
 </body>
 </html>
