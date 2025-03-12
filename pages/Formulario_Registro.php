@@ -33,6 +33,7 @@ if (!isset($_SESSION['usuario_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Registro de Paciente</title>
 	<link rel="stylesheet" href="../css/formulario.css">
+	<link rel="icon" href="../image/icon.png" type="image/png">
 </head>
 <body>
     <div class="container">
