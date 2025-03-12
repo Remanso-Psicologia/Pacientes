@@ -1,0 +1,95 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ee9a58;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="cel"],
+        input[type="eps"],
+        input[type="rh"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+        .form-rows .form-groups {
+            flex: 2;
+        }
+        .form-row .form-group.full-width {
+            flex: 100%;
+        }
+		/* Color Boton */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #ee9a58;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+		/* Color Boton Flotar */
+        .btn:hover {
+            background-color: #45a049;
+			color: black;
+        }
+        /* Media queries para diseño responsive */
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+            }
+            .form-row .form-group {
+                flex: 100%;
+            }
+        }
+		/* Asegura que el fondo cubra toda la pantalla y se ajuste bien */
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100vh; /* Ocupa toda la altura de la ventana del navegador */
+			background-image: url('../image/fondo.jpg');
+			background-size: cover; /* La imagen cubre toda el área sin distorsionarse */
+			background-position: center; /* Centra la imagen */
+			background-attachment: fixed; /* La imagen no se mueve cuando se hace scroll */
+		}
